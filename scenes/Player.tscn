@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Fighter_plane_base.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Player.gd" type="Script" id=2]
+
+[node name="Player" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+offset = Vector2( 2, 0 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PoolVector2Array( 0, -19, -4, 0, -13, 8, -13, 11, -3, 11, -3, 14, -7, 18, -7, 20, 7, 20, 7, 18, 3, 14, 3, 11, 13, 11, 13, 8, 4, 0 )
+__meta__ = {
+"_editor_description_": "The Collision is weird might optimize this in case its just a small value."
+}
